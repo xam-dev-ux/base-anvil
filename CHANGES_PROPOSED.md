@@ -56,7 +56,21 @@ A matching row is added to the troubleshooting table pointing to this section.
 The existing troubleshooting row says "use a network where the feature is live"
 but doesn't show how to check. Added the `cast call` command against the
 ActivationRegistry and the B20 feature IDs inline, so developers can verify
-before hitting the error on a live network.
+before hitting the error on a live network:
+
+```bash
+# B20_ASSET
+cast call 0x8453000000000000000000000000000000000001 \
+  "isActivated(bytes32)(bool)" \
+  0xcdcc772fe4cbdb1029f822861176d09e646db96723d4c1e82ddfdeb8163ef54c \
+  --rpc-url https://mainnet.base.org
+
+# B20_STABLECOIN
+cast call 0x8453000000000000000000000000000000000001 \
+  "isActivated(bytes32)(bool)" \
+  0xecfa0def2c10020caaf65e6155aa69c84b24892aaef76eeac52e0e2b3a0b8601 \
+  --rpc-url https://mainnet.base.org
+```
 
 ---
 
