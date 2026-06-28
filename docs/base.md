@@ -165,7 +165,7 @@ with the real factory's `getB20Address(variant, sender, salt)` view instead.
 | --- | --- |
 | `call to non-contract address 0x...` at a precompile | You are running stock `forge`, or Base is not enabled. Use `base-forge`, or set `base = true` / `FOUNDRY_BASE=true`. |
 | `vm.etch: cannot use precompile … as an argument` | base-forge protects native precompile addresses from being overwritten. Remove the `vm.etch` call and call the real precompile directly — see [Migrating tests from `vm.etch` mocks](#migrating-tests-from-vmetch-mocks-to-real-precompiles) above. |
-| `FeatureNotActivated` against a live network | The precompile's feature is not activated on that chain yet. Local `base-anvil` seeds them active. To verify which features are live on a remote network before deploying: `cast call 0x8453000000000000000000000000000000000001 "isActivated(bytes32)(bool)" <featureId> --rpc-url <RPC>`. Feature IDs: B20_ASSET `0xcdcc772fe4cbdb1029f822861176d09e646db96723d4c1e82ddfdeb8163ef54c`, B20_STABLECOIN `0xecfa0def2c10020caaf65e6155aa69c84b24892aaef76eeac52e0e2b3a0b8601`. |
+| `FeatureNotActivated` against a live network | The precompile's feature is not activated on that chain yet. Local `base-anvil` seeds them active; on a network, use one where the feature is live. |
 | Behavior differs from the chain you expect | Your installed build may reproduce a different `base/base` commit than the chain you are comparing against. Check the release title / [`RELEASES.md`](../RELEASES.md) and re-install the matching version with `base-foundryup --install <ref>`. |
 
 ## Next steps
