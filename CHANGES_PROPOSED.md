@@ -51,6 +51,15 @@ A matching row is added to the troubleshooting table pointing to this section.
 
 ---
 
+## Minor: `FeatureNotActivated` — add feature IDs and verification command
+
+The existing troubleshooting row says "use a network where the feature is live"
+but doesn't show how to check. Added the `cast call` command against the
+ActivationRegistry and the B20 feature IDs inline, so developers can verify
+before hitting the error on a live network.
+
+---
+
 ## Diff
 
 Full change in [`docs/base.md`](docs/base.md). This file is for context only
