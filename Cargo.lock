@@ -2294,8 +2294,8 @@ dependencies = [
 
 [[package]]
 name = "base-common-chains"
-version = "0.0.0"
-source = "git+https://github.com/base/base.git?rev=3eb481791135e465e7e1682218f1e4619b574fa6#3eb481791135e465e7e1682218f1e4619b574fa6"
+version = "1.4.2"
+source = "git+https://github.com/base/base.git?rev=5034ef80bc90261ff6c4841fdf4baed34283abad#5034ef80bc90261ff6c4841fdf4baed34283abad"
 dependencies = [
  "alloy-chains",
  "alloy-eips",
@@ -2309,9 +2309,40 @@ dependencies = [
 ]
 
 [[package]]
+name = "base-common-consensus"
+version = "1.4.2"
+source = "git+https://github.com/base/base.git?rev=5034ef80bc90261ff6c4841fdf4baed34283abad#5034ef80bc90261ff6c4841fdf4baed34283abad"
+dependencies = [
+ "alloy-consensus",
+ "alloy-eips",
+ "alloy-evm",
+ "alloy-primitives",
+ "alloy-rlp",
+ "alloy-rpc-types-eth",
+ "alloy-serde",
+ "alloy-sol-types",
+ "reth-codecs",
+ "reth-primitives-traits",
+ "reth-zstd-compressors",
+ "revm",
+ "serde",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "base-common-eip8130"
+version = "1.4.2"
+source = "git+https://github.com/base/base.git?rev=5034ef80bc90261ff6c4841fdf4baed34283abad#5034ef80bc90261ff6c4841fdf4baed34283abad"
+dependencies = [
+ "alloy-primitives",
+ "base-common-consensus",
+ "thiserror 2.0.20",
+]
+
+[[package]]
 name = "base-common-genesis"
-version = "0.0.0"
-source = "git+https://github.com/base/base.git?rev=3eb481791135e465e7e1682218f1e4619b574fa6#3eb481791135e465e7e1682218f1e4619b574fa6"
+version = "1.4.2"
+source = "git+https://github.com/base/base.git?rev=5034ef80bc90261ff6c4841fdf4baed34283abad#5034ef80bc90261ff6c4841fdf4baed34283abad"
 dependencies = [
  "alloy-chains",
  "alloy-consensus",
@@ -2328,13 +2359,14 @@ dependencies = [
 
 [[package]]
 name = "base-common-precompiles"
-version = "0.0.0"
-source = "git+https://github.com/base/base.git?rev=3eb481791135e465e7e1682218f1e4619b574fa6#3eb481791135e465e7e1682218f1e4619b574fa6"
+version = "1.4.2"
+source = "git+https://github.com/base/base.git?rev=5034ef80bc90261ff6c4841fdf4baed34283abad#5034ef80bc90261ff6c4841fdf4baed34283abad"
 dependencies = [
  "alloy-evm",
  "alloy-primitives",
  "alloy-sol-types",
  "base-common-chains",
+ "base-common-eip8130",
  "base-common-genesis",
  "base-precompile-macros",
  "base-precompile-storage",
@@ -2343,8 +2375,8 @@ dependencies = [
 
 [[package]]
 name = "base-precompile-macros"
-version = "0.0.0"
-source = "git+https://github.com/base/base.git?rev=3eb481791135e465e7e1682218f1e4619b574fa6#3eb481791135e465e7e1682218f1e4619b574fa6"
+version = "1.4.2"
+source = "git+https://github.com/base/base.git?rev=5034ef80bc90261ff6c4841fdf4baed34283abad#5034ef80bc90261ff6c4841fdf4baed34283abad"
 dependencies = [
  "alloy-primitives",
  "proc-macro2",
@@ -2354,8 +2386,8 @@ dependencies = [
 
 [[package]]
 name = "base-precompile-storage"
-version = "0.0.0"
-source = "git+https://github.com/base/base.git?rev=3eb481791135e465e7e1682218f1e4619b574fa6#3eb481791135e465e7e1682218f1e4619b574fa6"
+version = "1.4.2"
+source = "git+https://github.com/base/base.git?rev=5034ef80bc90261ff6c4841fdf4baed34283abad#5034ef80bc90261ff6c4841fdf4baed34283abad"
 dependencies = [
  "alloy-evm",
  "alloy-primitives",
